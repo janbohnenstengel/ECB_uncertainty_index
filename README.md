@@ -6,16 +6,12 @@ A text-based measure of uncertainty in ECB monetary policy communication. A fine
 
 1. **Training data.** A sample of sentences from ECB monetary policy statements was labelled (uncertain / not uncertain) by an LLM, and the labels were spot-checked by humans (human-checked silver labels).
 2. **Model.** A RoBERTa model is fine-tuned on these labels. The split into training, validation and test sets is random by statement, so that sentences from the same statement never appear in different sets; sentences repeated verbatim across statements are removed from validation and test.
-3. **Index.** The fine-tuned model scores every sentence of every statement. The statement-level index is the mean predicted probability of uncertainty (`unc_mean_prob`), and a 5-meeting moving average of it.
+3. **Index.** The fine-tuned model scores every sentence of every statement. The statement-level index is the mean predicted probability of uncertainty (`unc_mean_prob`). Some graphs use a 5-meeting moving average of it.
 4. **Comparisons.** The index is compared with:
    - a simple self-made uncertainty dictionary indicator and one using the Loughran–McDonald dictionary (Loughran & McDonald, 2011), applied to the same statements
    - the Economic Policy Uncertainty index (Baker et al., 2016), averaged over Germany, France, Italy and Spain
    - the VSTOXX, the implied volatility index of the Euro Stoxx 50
    - disagreement among professional forecasters: the cross-sectional variance and standard deviation of one-year-ahead HICP inflation forecasts in the ECB Survey of Professional Forecasters (SPF)
-
-## Matching ECB meetings to SPF rounds
-
-Each ECB meeting is assigned to the **first SPF round whose response deadline falls strictly after the meeting**, i.e. the first survey in which forecasters could have reacted to that statement. A meeting is never matched to a deadline that has already passed. The SPF deadlines (1999Q1–2025Q4) are listed in `match_ecb_spf.R`; meetings after the last deadline remain unmatched.
 
 ## Repository structure
 
