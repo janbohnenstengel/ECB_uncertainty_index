@@ -51,10 +51,11 @@ plots/                 Figures
 
 Data files and model weights are not included in the repository. To reproduce the results, place the following in `data/`:
 
-- **ECB monetary policy statements** (ECB website)
 - **SPF individual forecasts** (ECB Survey of Professional Forecasters, one `YYYYQ#.csv` file per round) in `data/SPF/SPF_individual_forecasts/`
 - **Economic Policy Uncertainty index** for Europe (policyuncertainty.com) in `data/EPU/`
 - **VSTOXX** historical prices as `data/VSTOXX_EUR_Historical.csv`
+
+The **ECB texts** scraped and processed in the first 3 code files.
 
 
 ## Requirements
