@@ -1,7 +1,7 @@
 data/
-cbroberta_models/best/
-cbroberta_models/version_1/
-cbroberta_models/version_temp/
+cbroberta_models/best/*
+cbroberta_models/version_1/*
+cbroberta_models/version_temp/*
 
 # R
 .Rproj.user/
