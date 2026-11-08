@@ -1,0 +1,19 @@
+data/
+cbroberta_models/best/
+cbroberta_models/version_1/
+cbroberta_models/version_temp/
+
+# R
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Python
+__pycache__/
+.ipynb_checkpoints/
+
+# Model weights
+*.safetensors
+*.bin
+*.pt
